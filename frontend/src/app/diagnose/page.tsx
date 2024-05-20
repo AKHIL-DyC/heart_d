@@ -80,7 +80,7 @@ const PageComponent = () => {
     console.log(parsed)
   }*/
   const handleclick=async(): Promise<void> =>{
-   const response= await fetch('http://localhost:5000/diagnose', {
+   const response= await fetch('https://heart-d-backend.onrender.com/diagnose', {
       method: 'POST', // Important for sending data
       headers: {
         'Content-Type': 'application/json', // Indicate JSON data
