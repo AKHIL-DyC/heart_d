@@ -18,7 +18,7 @@ interface Word {
   text: string;
   className?: string;
 }
-const page = () => {
+const PageComponent = () => {
   const [count, setCount] = useState(0)
   const[sex,setsex]=useState("0");
   const[age,setage]=useState("0");
@@ -185,4 +185,4 @@ const page = () => {
   )
 }
 
-export default page
+export default PageComponent

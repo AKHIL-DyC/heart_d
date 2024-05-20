@@ -27,9 +27,9 @@ const Ecg: React.FC<Ecgp> = ({ state, setstate }) => {
           onChange={handleChange}
         >
           <MenuItem value={0}>Normal</MenuItem>
-          <MenuItem value={1}>Having ST-T Wave Abnormality (T wave inversions and/or ST elevation or depression greater than 0.05 mV)
+          <MenuItem value={1}>Having ST-T Wave Abnormality (T wave inversions and or ST elevation or depression greater than 0.05 mV)
 </MenuItem>
-          <MenuItem value={2}>Showing Probable Or Definite Left Ventricular Hypertrophy by Estes' Criteria
+          <MenuItem value={2}>Showing Probable Or Definite Left Ventricular Hypertrophy by Estes Criteria
 </MenuItem>
         </Select>
       </FormControl>
