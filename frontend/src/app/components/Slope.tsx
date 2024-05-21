@@ -27,9 +27,9 @@ const Slope: React.FC<Slopep> = ({ state, setstate }) => {
           label="ST slope"
           onChange={handleChange}
         >
-          <MenuItem value={0}>Upsloping</MenuItem>
-          <MenuItem value={1}>Flat</MenuItem>
-          <MenuItem value={2}>Downsloping</MenuItem>
+          <MenuItem value={1}>Upsloping</MenuItem>
+          <MenuItem value={2}>Flat</MenuItem>
+          <MenuItem value={3}>Downsloping</MenuItem>
         </Select>
       </FormControl>
     </Box>

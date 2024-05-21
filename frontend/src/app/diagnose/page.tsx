@@ -20,8 +20,8 @@ interface Word {
 }
 const PageComponent = () => {
   const [count, setCount] = useState(0)
-  const[sex,setsex]=useState("0");
   const[age,setage]=useState("0");
+  const[sex,setsex]=useState("0");
   const[chestpain,setchestpain]=useState("0");
   const[restingbp,setrestingbp]=useState("0");
   const[cholestrol,setcholestrol]=useState("0");
@@ -68,7 +68,7 @@ const PageComponent = () => {
       parseInt(peak),
       parseInt(slope)
     ]);
-  }, [sex, age, chestpain, restingbp, cholestrol, sugar, ecg, heart, angina, peak,slope]);
+  }, [age, sex, chestpain, restingbp, cholestrol, sugar, ecg, heart, angina, peak, slope]);
   useEffect(() => {
     console.log("State array:", array);
   }, [array]);

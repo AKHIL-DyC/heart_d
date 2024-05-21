@@ -26,8 +26,8 @@ const Sugar: React.FC<Sugarp> = ({ state, setstate }) => {
           label="fasting blood sugar"
           onChange={handleChange}
         >
-          <MenuItem value={0}>less than 120mg/dl</MenuItem>
-          <MenuItem value={1}>higher than 120mg/dl</MenuItem>
+          <MenuItem value={0}>Less than 120mg/dl</MenuItem>
+          <MenuItem value={1}>Greater than 120mg/dl</MenuItem>
         </Select>
       </FormControl>
     </Box>
