@@ -26,8 +26,8 @@ const Angina: React.FC<AnginaProps> = ({ state, setstate }) => {
           label="Exercise Angina"
           onChange={handleChange}
         >
-          <MenuItem value={0}>no</MenuItem>
-          <MenuItem value={1}>yes</MenuItem>
+          <MenuItem value={0}>No</MenuItem>
+          <MenuItem value={1}>Yes</MenuItem>
         </Select>
       </FormControl>
     </Box>

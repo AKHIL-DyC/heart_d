@@ -26,11 +26,10 @@ const Chestpain: React.FC<chestpain> = ({ state, setstate }) => {
           label="Chest Pain Type"
           onChange={handleChange}
         >
-          <MenuItem value={0}>Typical Angina</MenuItem>
-          <MenuItem value={1}>Atypical Angina</MenuItem>
-          <MenuItem value={2}>Non Anginal Pain</MenuItem>
-          <MenuItem value={3}>Asymptomatic</MenuItem>
-          <MenuItem value={4}>very high</MenuItem>
+          <MenuItem value={1}>Typical Angina</MenuItem>
+          <MenuItem value={2}>Atypical Angina</MenuItem>
+          <MenuItem value={3}>Non-Anginal Pain</MenuItem>
+          <MenuItem value={4}>Asymptomatic</MenuItem>
         </Select>
       </FormControl>
     </Box>
