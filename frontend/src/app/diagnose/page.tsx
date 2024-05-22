@@ -22,7 +22,7 @@ const PageComponent = () => {
   const [count, setCount] = useState(0)
   const[age,setage]=useState("0");
   const[sex,setsex]=useState("0");
-  const[chestpain,setchestpain]=useState("0");
+  const[chestpain,setchestpain]=useState("1");
   const[restingbp,setrestingbp]=useState("0");
   const[cholestrol,setcholestrol]=useState("0");
   const[sugar,setsugar]=useState("0");
@@ -30,9 +30,10 @@ const PageComponent = () => {
   const[heart,setheart]=useState("0");
   const[angina,setangina]=useState("0");
   const[peak,setpeak]=useState("0")
-  const[slope,setslope]=useState("0");
+  const[slope,setslope]=useState("1");
   const[array,setarray]=useState<number[]>([]);
   const[result,setresult]=useState()
+  const[percentage,setpercentage]=useState(0)
   const[text,settext]=useState<Word[]>([
     {
       text: "Fill",
@@ -79,6 +80,7 @@ const PageComponent = () => {
     const parsed=await res.json();
     console.log(parsed)
   }*/
+  //https://heart-d-backend.onrender.com/diagnose
   const handleclick=async(): Promise<void> =>{
    const response= await fetch('https://heart-d-backend.onrender.com/diagnose', {
       method: 'POST', // Important for sending data
@@ -98,8 +100,10 @@ const PageComponent = () => {
         parseInt(slope)]}), // Replace with your numbers array
     })
     const data=await response.json();
-    console.log(data)
-    setresult(data.result)
+    console.log(data.result[0])
+    console.log(data.result[1])
+    setresult(data.result[0])
+    setpercentage(data.result[1]);
   };
   const words = [
     {
@@ -117,6 +121,10 @@ const PageComponent = () => {
     {
       text: "Healthy.",
       className: "text-blue-500 dark:text-blue-500",
+    },
+    {
+      text: `Accuracy  :${ percentage*100} %`,
+      className: "text-grey-500 dark:text-blue-500",
     },
   ];
   const words2 = [
@@ -136,7 +144,12 @@ const PageComponent = () => {
       text: "Healthy.",
       className: "text-red-500 dark:text-blue-500",
     },
+    {
+      text: `Accuracy  :${ percentage*100 }%`,
+      className: "text-grey-500 dark:text-blue-500",
+    },
   ];
+  
   useEffect(()=>{
     if(result==0){
         settext(words)
