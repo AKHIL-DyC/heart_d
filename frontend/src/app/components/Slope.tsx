@@ -17,7 +17,7 @@ const Slope: React.FC<Slopep> = ({ state, setstate }) => {
   };
 
   return (
-    <Box sx={{ minWidth: 120 }}>
+    <Box sx={{ minWidth: 120 ,px:1}}>
       <FormControl fullWidth>
         <InputLabel id="demo-simple-select-label">ST Slope</InputLabel>
         <Select

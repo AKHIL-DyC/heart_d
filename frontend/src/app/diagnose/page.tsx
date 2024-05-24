@@ -73,7 +73,8 @@ const PageComponent = () => {
   useEffect(() => {
     console.log("State array:", array);
   }, [array]);
-
+console.log(percentage)
+console.log(result)
  /*const handleclick= async()=>{
     console.log("clicked")
     const res=await fetch("http://localhost:5000/diagnose")
@@ -100,8 +101,8 @@ const PageComponent = () => {
         parseInt(slope)]}), // Replace with your numbers array
     })
     const data=await response.json();
-    console.log(data.result[0])
-    console.log(data.result[1])
+    //console.log(data.result[0])
+    //console.log(data.result[1])
     setresult(data.result[0])
     setpercentage(data.result[1]);
   };
@@ -157,7 +158,8 @@ const PageComponent = () => {
     else if(result==1){
       settext(words2)
     }
-  },[result])
+    setpercentage(percentage)
+  },[result,percentage])
   return (
     <div style={{width:'100vw'}}>
     <AuroraBackground>
@@ -169,17 +171,17 @@ const PageComponent = () => {
      duration: 0.8,
      ease: "easeInOut",
    }}
-   className="relative flex flex-row gap-4 items-center justify-center px-4 pb-10"
+   className="relative flex flex-row gap-10 items-center justify-center px-4 pb-10"
  >  
   
-   <div style={{display:'flex',gap:'2vh',flexDirection:'column'}}>
+   <div style={{display:'flex',gap:'2vh',flexDirection:'column',width:'20vw'}}>
 <Tfield state={age} setstate={setage} title="age"/>
 <Selecter state={sex} setstate={setsex}/>
 <Chestpain state={chestpain} setstate={setchestpain}/>
 <Tfield state={restingbp} setstate={setrestingbp} title="resting bp"/>
 <Tfield state={cholestrol} setstate={setcholestrol} title="cholestrol"/>
 </div>
-<div style={{display:'flex',gap:'2vh',flexDirection:'column'}}>
+<div style={{display:'flex',gap:'2vh',flexDirection:'column',width:'20vw'}}>
 <Sugar state={sugar} setstate={setsugar}/>
 <Ecg state={ecg} setstate={setecg}/>
 <Tfield state={heart} setstate={setheart} title="max-heart-rate"/>
@@ -192,7 +194,7 @@ const PageComponent = () => {
      Check
    </button>
  </motion.div>
- <TypewriterEffect words={text}></TypewriterEffect>
+ <TypewriterEffect words={text} percentage={percentage}></TypewriterEffect>
 </AuroraBackground>
 </div>
   )

@@ -1,5 +1,3 @@
-"use client";
-
 import { cn } from "../../utils/cn";
 import { motion, stagger, useAnimate, useInView } from "framer-motion";
 import { useEffect } from "react";
@@ -8,6 +6,7 @@ export const TypewriterEffect = ({
   words,
   className,
   cursorClassName,
+  percentage
 }: {
   words: {
     text: string;
@@ -15,6 +14,7 @@ export const TypewriterEffect = ({
   }[];
   className?: string;
   cursorClassName?: string;
+  percentage: number; // Add percentage as a prop
 }) => {
   // split text inside of words into array of characters
   const wordsArray = words.map((word) => {
@@ -28,7 +28,7 @@ export const TypewriterEffect = ({
   const isInView = useInView(scope);
 
   useEffect(() => {
-    if (isInView) {
+    if (isInView || percentage > 0) {
       animate(
         "span",
         {
@@ -43,7 +43,7 @@ export const TypewriterEffect = ({
         }
       );
     }
-  }, [isInView, animate, words]);
+  }, [isInView, animate, words, percentage]); // Add 'percentage' to dependency array
 
   const renderWords = () => {
     return (

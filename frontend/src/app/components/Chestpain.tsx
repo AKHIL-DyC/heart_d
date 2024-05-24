@@ -16,7 +16,7 @@ const Chestpain: React.FC<chestpain> = ({ state, setstate }) => {
     setstate(event.target.value);
   };
   return (
-    <Box sx={{ minWidth: 120 }}>
+    <Box sx={{ minWidth: 120, px:1 }}>
       <FormControl fullWidth>
         <InputLabel id="demo-simple-select-label">Chest Pain Type</InputLabel>
         <Select

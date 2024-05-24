@@ -16,7 +16,7 @@ const Angina: React.FC<AnginaProps> = ({ state, setstate }) => {
     setstate(event.target.value);
   };
   return (
-    <Box sx={{ minWidth: 120 }}>
+    <Box sx={{ minWidth: 120, px:1 }}>
       <FormControl fullWidth>
         <InputLabel id="demo-simple-select-label">Exercise Angina</InputLabel>
         <Select
