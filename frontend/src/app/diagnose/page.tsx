@@ -140,6 +140,7 @@ console.log(result)
     },
     {
       text: "Not",
+      className: "text-red-500 dark:text-blue-500",
     },
     {
       text: "Healthy.",
