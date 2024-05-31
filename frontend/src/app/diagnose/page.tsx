@@ -162,7 +162,8 @@ console.log(result)
     setpercentage(percentage)
   },[result,percentage])
   return (
-    <div style={{width:'100vw'}} >
+    <div className='w-screen h-[140vh] bg-white  justify-center content-center lg:h-[100vh]'
+     >
     <AuroraBackground>
  <motion.div
    initial={{ opacity: 0.0, y: 40 }}
@@ -172,17 +173,17 @@ console.log(result)
      duration: 0.8,
      ease: "easeInOut",
    }}
-   className="relative flex flex-col h-200 gap-10 items-center justify-center px-4 pb-10 lg:flex-row "
+   className="relative flex flex-col  gap-10 items-center justify-center px-4 pb-10 pt-80 lg:flex-row lg:pt-0"
  >  
   
-   <div style={{display:'flex',gap:'2vh',flexDirection:'column',width:'20vw'}}>
+   <div className='flex flex-col w-22 gap-y-[2vh] lg:w-1/2'>
 <Tfield state={age} setstate={setage} title="age"/>
 <Selecter state={sex} setstate={setsex}/>
 <Chestpain state={chestpain} setstate={setchestpain}/>
 <Tfield state={restingbp} setstate={setrestingbp} title="resting bp"/>
 <Tfield state={cholestrol} setstate={setcholestrol} title="cholestrol"/>
 </div>
-<div style={{display:'flex',gap:'2vh',flexDirection:'column',width:'20vw'}}>
+<div className='flex flex-col w-22 gap-y-[2vh] lg:w-1/2'>
 <Sugar state={sugar} setstate={setsugar}/>
 <Ecg state={ecg} setstate={setecg}/>
 <Tfield state={heart} setstate={setheart} title="max-heart-rate"/>
