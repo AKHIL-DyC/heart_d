@@ -162,7 +162,7 @@ console.log(result)
     setpercentage(percentage)
   },[result,percentage])
   return (
-    <div style={{width:'100vw'}}>
+    <div style={{width:'100vw'}} >
     <AuroraBackground>
  <motion.div
    initial={{ opacity: 0.0, y: 40 }}
@@ -172,7 +172,7 @@ console.log(result)
      duration: 0.8,
      ease: "easeInOut",
    }}
-   className="relative flex flex-row gap-10 items-center justify-center px-4 pb-10"
+   className="relative flex flex-col h-200 gap-10 items-center justify-center px-4 pb-10 lg:flex-row "
  >  
   
    <div style={{display:'flex',gap:'2vh',flexDirection:'column',width:'20vw'}}>
