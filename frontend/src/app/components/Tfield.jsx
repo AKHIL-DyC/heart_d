@@ -8,7 +8,7 @@ export default function Tfield({state,setstate,title}) {
    const enteredvalue=event.target.value
    const parsedvalue=parseInt(enteredvalue);
    setstate(enteredvalue);
-   if(enteredvalue>0&&enteredvalue<300){
+   if(enteredvalue>0&&enteredvalue<600){
     seterror(false)
    }
    else{
