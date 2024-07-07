@@ -37,7 +37,7 @@ f_name = "heart_disease_prediction_model.pkl"
 loaded_model = joblib.load(f_name)
 @app.route('/')
 def hello():
-    return "Hello
+    return "Hello"
 @app.route('/diagnose', methods=['POST'])
 @cross_origin(supports_credentials=True)
 def diagnose():
